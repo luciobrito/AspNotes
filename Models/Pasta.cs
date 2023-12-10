@@ -6,14 +6,14 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace AspNotes.Models
 {
-    public class Nota
+    public class Pasta
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid id {get; set;}
-        public string titulo {get; set;}
-        public string corpo {get; set;}
-        public Guid? pastaId {get; set;}
-        public Pasta? pasta {get; set;}
+        public string? nome {get; set;}
+        public ICollection<Nota> Notas {get;} = new List<Nota>();
+
+
     }
 }
