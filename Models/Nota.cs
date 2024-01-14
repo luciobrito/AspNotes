@@ -11,7 +11,9 @@ namespace AspNotes.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid id {get; set;}
+        [Required]
         public string titulo {get; set;}
+        [Required]
         public string corpo {get; set;}
         public Guid? pastaId {get; set;}
         public Pasta? pasta {get; set;}

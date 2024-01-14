@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace AspNotes.Models
@@ -13,8 +7,11 @@ namespace AspNotes.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid id {get; set;}
+        [Required]
         public string? nome {get; set;}
+        [Required]
         public string? email {get; set;}
+        [Required]
         public string? senha {get; set;}
     }
 }

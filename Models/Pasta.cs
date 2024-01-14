@@ -11,9 +11,8 @@ namespace AspNotes.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid id {get; set;}
+        [Required]
         public string? nome {get; set;}
         public ICollection<Nota> Notas {get;} = new List<Nota>();
-
-
     }
 }
