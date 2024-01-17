@@ -13,5 +13,8 @@ namespace AspNotes.Models
         public string? email {get; set;}
         [Required]
         public string? senha {get; set;}
+
+        public DateTimeOffset CreatedAt {get; set;}
+        public DateTimeOffset UpdatedAt {get; set;}
     }
 }
